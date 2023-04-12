@@ -11,13 +11,16 @@ int A[N][N];
 int B[N][N];
 int C[N][N];
 
+
+
+
 int main() 
 {
     int i,j,k;
     struct timeval tv1, tv2;
     struct timezone tz;
 	double elapsed; 
-  // omp_set_num_threads(omp_get_num_procs());
+    omp_set_num_threads(omp_get_num_procs());
     for (i= 0; i< N; i++)
         for (j= 0; j< N; j++)
 	{
